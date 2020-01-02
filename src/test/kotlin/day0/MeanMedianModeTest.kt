@@ -1,5 +1,6 @@
 package day0
 
+import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.internal.runners.JUnit4ClassRunner
@@ -22,6 +23,7 @@ internal class MeanMedianModeTest {
     fun test1() {
         val answer = meanMedianMode
                 .solve(arrayOf("10", "64630 11735 14216 99233 14470 4978 73429 38120 51135 67060"))
-        assert(answer.contentEquals(arrayOf("43900.6", "44627.5", "4978"))) { "Array contents are not equal" }
+        Assert.assertTrue("Array contents are not equal",
+                          answer.contentEquals(arrayOf("43900.6", "44627.5", "4978")))
     }
 }
